@@ -19,3 +19,13 @@
 - has_many: groups
 - has_many: messages
 - has_many: members
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foregn_key: true|
+|name|string| null: false, unique: true|
+
+- has_many: members
+- has_many: messages
