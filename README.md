@@ -9,3 +9,13 @@
 
 - belongs_to :group
 - belongs_to :user
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false, unique: true|
+|nickname|string|null: false, unique: true|
+
+- has_many: groups
+- has_many: messages
+- has_many: members
