@@ -16,19 +16,18 @@
 |email|string|null: false, unique: true|
 |nickname|string|null: false, unique: true|
 ### Association
-- has_many :groups
 - has_many :groups, through: :groups_users
 - has_many :messages
-- has_many :members
+- has_many :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string| null: false, unique: true|
 ### Association
-- has_many :members
+- has_many :groups_users
 - has_many :messages
-- has_many :users
+- has_many :users, through: :groups_users
 
 
 ## groups_usersテーブル
