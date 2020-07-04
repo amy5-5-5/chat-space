@@ -4,7 +4,7 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foregn_key: true|
-|body|text|null: false|
+|body|text|
 |image|string|
 ### Association
 - belongs_to :group
@@ -17,18 +17,19 @@
 |nickname|string|null: false, unique: true|
 ### Association
 - has_many :groups
+- has_many :groups, through: :groups_users
 - has_many :messages
 - has_many :members
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foregn_key: true|
 |name|string| null: false, unique: true|
 ### Association
 - has_many :members
 - has_many :messages
+- has_many :users
+
 
 ## groups_usersテーブル
 |Column|Type|Options|
@@ -37,4 +38,4 @@
 |group_id|integer|null: false, foregn_key: true|
 ### Association
 - belongs_to :group
-- belongs_to :users
+- belongs_to :user
