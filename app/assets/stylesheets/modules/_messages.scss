@@ -7,6 +7,10 @@
   width: 300px;
   float: left;
   color: #ffffff;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
   .side-header {
     background-color: #253141;
@@ -25,7 +29,6 @@
         display: flex;
         justify-content: flex-start;
         text-align: left;
-        color: #ffffff;
         font-size: 16px;
       }
     }
@@ -34,21 +37,16 @@
         &__new-group {
           text-align: right;
           margin-left: 0.3rem;
-            a{
-              color: #ffffff;
-            }
           }
         &__edit-user {
           margin-left: 5px;
-          a {
-            color: #ffffff;
-          }
         }
       }
   .groups {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
+    overflow: scroll;
     .group {
       margin-bottom: 40px;
       color: #ffffff;
@@ -136,7 +134,7 @@
     form {
       display: flex;
       .input-box {
-        width: 100%;
+        // width: 100%;
         position: relative;
         display: flex;
         &__text {
